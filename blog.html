@@ -1,0 +1,138 @@
+
+214
+            <div class='content-inner'>
+215
+              <div class='main-outer'>
+216
+                <div class='fauxborder-left main-fauxborder-left'>
+217
+                  <div class='region-inner main-inner'>
+218
+                    <div class='columns fauxcolumns'>
+219
+                      <div class='column-center-outer'>
+220
+                        <div class='column-center-inner'>
+221
+                          <b:section class='main' id='main' showaddelement='no'>
+222
+                            <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+223
+                              <b:widget-settings>
+224
+                                <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+225
+                                <b:widget-setting name='style.textcolor'>#009eb8</b:widget-setting>
+226
+                                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+227
+                                <b:widget-setting name='authorLabel'>By</b:widget-setting>
+228
+                                <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+229
+                                <b:widget-setting name='style.urlcolor'>#555555</b:widget-setting>
+230
+                                <b:widget-setting name='showAuthor'>false</b:widget-setting>
+231
+                                <b:widget-setting name='style.linkcolor'>#333333</b:widget-setting>
+232
+                                <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+233
+                                <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+234
+                                <b:widget-setting name='reactionsLabel'/>
+235
+                                <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+236
+                                <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+237
+                                <b:widget-setting name='showLabels'>true</b:widget-setting>
+238
+                                <b:widget-setting name='showLocation'>true</b:widget-setting>
+239
+                                <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+240
+                                <b:widget-setting name='postsPerAd'>3</b:widget-setting>
+241
+                                <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+242
+                                <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+243
+                                <b:widget-setting name='showInlineAds'>true</b:widget-setting>
+244
+                                <b:widget-setting name='showReactions'>false</b:widget-setting>
+245
+                              </b:widget-settings>
+246
+                              <b:includable id='main' var='top'>
+247
+  <b:if cond='!data:mobile'>
+248
+    <!-- posts -->
+249
+    <div class='blog-posts hfeed'>
+250
+​
+251
+      <b:include data='top' name='status-message'/>
+252
+​
+253
+      <b:loop values='data:posts' var='post'>
+254
+        <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
+255
+          &lt;/div&gt;&lt;/div&gt;
+256
+        </b:if>
+257
+        <b:if cond='data:post.isDateStart'>
+258
+          &lt;div class=&quot;date-outer&quot;&gt;
+259
+        </b:if>
+260
+        <b:if cond='data:post.dateHeader'>
+261
+          <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+262
+        </b:if>
+263
+        <b:if cond='data:post.isDateStart'>
+264
+          &lt;div class=&quot;date-posts&quot;&gt;
+265
+        </b:if>
+266
+        <div class='post-outer'>
+267
+          <b:include data='post' name='post'/>
+268
+          <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+269
+        </div>
+270
+​
+271
+        <!-- Ad -->
+272
+        <b:if cond='data:post.includeAd'>
+273
+          <div class='inline-ad'>
+274
+            <data:adCode/>
+275
+          </div>
+276
+        </b:if>
+277
+      </b:loop>
+278
+      <b:if cond='data:numPosts != 0'>
+279
+        &lt;/div&gt;&lt;/div&gt;
+280
+      </b:if>
+281
+    </div>
+Template: Edit Template
