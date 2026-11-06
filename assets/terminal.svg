@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Terminal showing whoami output">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace; font-size: 16px; }
+      .p { fill: #00ff9c; }
+      .c { fill: #e6edf3; }
+      .k { fill: #58a6ff; }
+      .v { fill: #f2cc60; }
+      .d { fill: #7d8da1; }
+      .l { opacity: 0; animation: show 0.01s linear forwards; }
+      .l1 { animation-delay: 0.4s; } .l2 { animation-delay: 1.1s; } .l3 { animation-delay: 1.5s; }
+      .l4 { animation-delay: 1.9s; } .l5 { animation-delay: 2.3s; } .l6 { animation-delay: 2.7s; }
+      .l7 { animation-delay: 3.3s; } .l8 { animation-delay: 3.7s; } .l9 { animation-delay: 4.1s; }
+      @keyframes show { to { opacity: 1; } }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .l { opacity: 1; animation: none; } .cursor { animation: none; } }
+    </style>
+  </defs>
+  <rect width="900" height="300" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <rect width="900" height="34" rx="12" fill="#161b22"/>
+  <rect y="22" width="900" height="12" fill="#161b22"/>
+  <circle cx="22" cy="17" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="17" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="17" r="6" fill="#27c93f"/>
+  <text class="mono d" x="450" y="22" text-anchor="middle" style="font-size:13px">dipshan@lab: ~</text>
+
+  <g class="mono">
+    <text class="l l1" x="24" y="68"><tspan class="p">dipshan@lab</tspan><tspan class="d">:</tspan><tspan class="k">~</tspan><tspan class="c">$ whoami</tspan></text>
+    <text class="l l2" x="24" y="94"><tspan class="c">dipshan_sharma</tspan></text>
+
+    <text class="l l3" x="24" y="128"><tspan class="p">dipshan@lab</tspan><tspan class="d">:</tspan><tspan class="k">~</tspan><tspan class="c">$ cat profile.txt</tspan></text>
+    <text class="l l4" x="24" y="154"><tspan class="k">role     </tspan><tspan class="d">=</tspan> <tspan class="v">"CS undergraduate moving into security operations"</tspan></text>
+    <text class="l l5" x="24" y="178"><tspan class="k">focus    </tspan><tspan class="d">=</tspan> <tspan class="v">"SOC analysis, detection labs, GRC"</tspan></text>
+    <text class="l l6" x="24" y="202"><tspan class="k">studying </tspan><tspan class="d">=</tspan> <tspan class="v">"CompTIA Security+ (SY0-701)"</tspan></text>
+
+    <text class="l l7" x="24" y="236"><tspan class="p">dipshan@lab</tspan><tspan class="d">:</tspan><tspan class="k">~</tspan><tspan class="c">$ ./current_project.sh</tspan></text>
+    <text class="l l8" x="24" y="262"><tspan class="d">[</tspan><tspan class="p">+</tspan><tspan class="d">]</tspan><tspan class="c"> building home-lab SIEM (Wazuh + Sysmon) ...</tspan></text>
+    <text class="l l9" x="24" y="286"><tspan class="d">[</tspan><tspan class="p">+</tspan><tspan class="d">]</tspan><tspan class="c"> writing it up here, one week at a time</tspan><tspan class="p cursor"> ▌</tspan></text>
+  </g>
+</svg>
